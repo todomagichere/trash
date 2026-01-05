@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand Blaster</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-bar">
+    <div class="brand">Hand Blaster</div>
+    <div class="controls">
+      <button id="startBtn" class="primary">Comenzar</button>
+      <button id="resetBtn" class="ghost">Reiniciar</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h1>Apunta con tu mano y dispara</h1>
+      <p>
+        Usa el cursor (o un toque) para apuntar y dispara a los orbes que aparecen.
+        Es un juego creado para funcionar como una página estática, listo para alojarse
+        en <strong>todmagichere.github.com/handblaster</strong> o cualquier instancia de GitHub Pages.
+      </p>
+      <ul class="tips">
+        <li>El reto dura 45 segundos.</li>
+        <li>Cada acierto aumenta tu racha, lo que hace crecer el objetivo.</li>
+        <li>Fallas rompen la racha y encogen el objetivo.</li>
+        <li>Juega con clicks o toques: solo necesitas tu mano.</li>
+      </ul>
+      <div class="hud">
+        <div><span class="label">Puntuación</span><span id="score">0</span></div>
+        <div><span class="label">Tiempo</span><span id="timer">45.0s</span></div>
+        <div><span class="label">Precisión</span><span id="accuracy">100%</span></div>
+        <div><span class="label">Mejor racha</span><span id="bestStreak">0</span></div>
+      </div>
+    </section>
+
+    <section class="arena-wrapper">
+      <canvas id="arena" aria-label="Zona de juego" role="img"></canvas>
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con HTML, CSS y JavaScript: sin dependencias ni compilación.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
