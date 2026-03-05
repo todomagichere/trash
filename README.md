@@ -17,9 +17,9 @@ Este repositorio reúne scripts de Bash para distintas tareas de automatización
    ```bash
    chmod +x *.sh bash_seq/seq.sh
    ```
-2. Ejecutar el script deseado, por ejemplo:
+2. Ejecutar el script deseado, por ejemplo (este script requiere al menos un archivo CSV con URLs):
    ```bash
-   ./checkredirects.sh
+   ./checkredirects.sh file.csv
    ```
 
 > Nota: algunos scripts pueden requerir dependencias del sistema (por ejemplo, `git`, `curl` o utilidades estándar de Unix).
